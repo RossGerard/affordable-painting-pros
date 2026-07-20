@@ -78,37 +78,12 @@
   .btn-navy{background:var(--navy);color:#fff;}
   .btn-navy:hover{background:var(--navy-ink);}
 
-  /* ---------- editable affordances ---------- */
-  [data-edit]{outline:1px dashed transparent;border-radius:4px;transition:outline-color .15s, background .15s;}
-  html[data-editing="true"] [data-edit]{outline-color:rgba(232,88,58,0.0);cursor:text;}
-  html[data-editing="true"] [data-edit]:hover{outline-color:var(--coral);background:rgba(232,88,58,0.06);}
-  html[data-editing="true"] [data-edit]:focus{outline:2px solid var(--coral);background:rgba(232,88,58,0.08);}
-
-  .edit-toggle{
-    position:fixed;bottom:24px;right:24px;z-index:900;
-    background:var(--navy-ink);color:#fff;border:none;border-radius:999px;
-    padding:14px 20px;font-family:'Inter',sans-serif;font-weight:600;font-size:14px;
-    display:flex;align-items:center;gap:10px;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,0.28);
-  }
-  .edit-toggle:hover{background:#000;}
-  .edit-toggle .dot{width:8px;height:8px;border-radius:50%;background:#8FE3C7;}
-  html[data-editing="true"] .edit-toggle .dot{background:var(--coral);}
-  .edit-banner{
-    position:fixed;top:0;left:0;right:0;z-index:899;
-    background:var(--coral);color:#fff;text-align:center;
-    font-size:13px;font-weight:600;padding:9px 12px;display:none;
-    font-family:'IBM Plex Mono',monospace;letter-spacing:0.02em;
-  }
-  html[data-editing="true"] .edit-banner{display:block;}
-  html[data-editing="true"] header{top:36px;}
-  html[data-editing="true"] body{padding-top:36px;}
-
   /* photo placeholder / uploader */
   .photo-slot{
     position:relative;overflow:hidden;border-radius:var(--radius);
     background:var(--teal-light) center/cover no-repeat;
     display:flex;align-items:center;justify-content:center;
-    min-height:220px;cursor:pointer;border:1px solid var(--border);
+    min-height:220px;border:1px solid var(--border);
   }
   .photo-slot .ph-inner{
     text-align:center;color:var(--teal-dark);padding:20px;pointer-events:none;
@@ -125,7 +100,6 @@
     font-family:'IBM Plex Mono',monospace;font-size:11px;padding:5px 10px;border-radius:999px;
     opacity:0;transition:opacity .15s;
   }
-  .photo-slot:hover .swap-hint{opacity:1;}
 
   /* ---------- header ---------- */
   .top-strip{
@@ -358,7 +332,6 @@
 </head>
 <body>
 
-<div class="edit-banner">EDIT MODE — click any text to type directly, or click a photo tile to upload your own image. Click "Editing on/off" again when finished.</div>
 
 <div class="top-strip">
   <div class="wrap">
@@ -664,18 +637,7 @@
   </div>
 </footer>
 
-<button class="edit-toggle" onclick="toggleEdit()"><span class="dot"></span><span id="edit-toggle-label">Editing off</span></button>
-
 <script>
-  function toggleEdit(){
-    const html = document.documentElement;
-    const on = html.getAttribute('data-editing') === 'true';
-    html.setAttribute('data-editing', on ? 'false' : 'true');
-    document.getElementById('edit-toggle-label').textContent = on ? 'Editing off' : 'Editing on';
-    document.querySelectorAll('[data-edit]').forEach(function(el){
-      el.setAttribute('contenteditable', on ? 'false' : 'true');
-    });
-  }
   function triggerUpload(slot){
     if(document.documentElement.getAttribute('data-editing') !== 'true') return;
     slot.querySelector('input[type=file]').click();
