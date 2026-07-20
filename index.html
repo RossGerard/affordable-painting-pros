@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-editing="false">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -84,21 +84,6 @@
     background:var(--teal-light) center/cover no-repeat;
     display:flex;align-items:center;justify-content:center;
     min-height:220px;border:1px solid var(--border);
-  }
-  .photo-slot .ph-inner{
-    text-align:center;color:var(--teal-dark);padding:20px;pointer-events:none;
-  }
-  .photo-slot .ph-inner svg{width:46px;height:46px;margin-bottom:10px;opacity:0.85;}
-  .photo-slot .ph-inner span{
-    display:block;font-family:'IBM Plex Mono',monospace;font-size:12px;
-    letter-spacing:0.04em;color:var(--teal-dark);
-  }
-  .photo-slot.has-photo .ph-inner{display:none;}
-  .photo-slot input[type=file]{display:none;}
-  .photo-slot .swap-hint{
-    position:absolute;bottom:10px;right:10px;background:rgba(15,27,44,0.75);color:#fff;
-    font-family:'IBM Plex Mono',monospace;font-size:11px;padding:5px 10px;border-radius:999px;
-    opacity:0;transition:opacity .15s;
   }
 
   /* ---------- header ---------- */
@@ -335,7 +320,7 @@
 
 <div class="top-strip">
   <div class="wrap">
-    <div data-edit contenteditable="false">Serving Bradenton, Sarasota &amp; the Gulf Coast — Licensed &amp; Insured — Free Estimates in 24 Hours</div>
+    <div>Serving Bradenton, Sarasota &amp; the Gulf Coast — Licensed &amp; Insured — Free Estimates in 24 Hours</div>
   </div>
 </div>
 
@@ -355,9 +340,9 @@
       <a class="nav-phone" href="tel:+19412221478">
         <span class="nav-call-now">CALL NOW!</span>
         <span class="nav-phone-num">
-          <span data-edit contenteditable="false">941-222-1478</span>
+          <span>941-222-1478</span>
         </span>
-        <span data-edit contenteditable="false" style="font-size:12px;font-weight:700;color:var(--teal);letter-spacing:0.02em;text-align:center;line-height:1.3;">Military and First<br>Responder Discount</span>
+        <span style="font-size:12px;font-weight:700;color:var(--teal);letter-spacing:0.02em;text-align:center;line-height:1.3;">Military and First<br>Responder Discount</span>
       </a>
     </div>
     <button class="menu-btn" aria-label="Menu">&#9776;</button>
@@ -371,15 +356,15 @@
       <span class="hero-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Flexible Scheduling</span>
       <span class="hero-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg> 5 Year Warranty</span>
     </div>
-    <h1 data-edit contenteditable="false">Quality Residential Painting.<br><em>Clean. Professional. Accurate.</em></h1>
-    <p class="lede" data-edit contenteditable="false">Quality affordable residential and commercial painting. Flexible scheduling. Quote to you right away.</p>
+    <h1>Quality Residential Painting.<br><em>Clean. Professional. Accurate.</em></h1>
+    <p class="lede">Quality affordable residential and commercial painting. Flexible scheduling. Quote to you right away.</p>
     <a class="hero-phone" href="tel:+19412221478">
       <span class="hero-phone-label">Ready for Quote and Scheduling? <b>CLICK to Call</b></span>
       <span class="hero-phone-num">
         941-222-1478
       </span>
     </a>
-    <p data-edit contenteditable="false" style="margin:16px 0 0;font-size:16.5px;font-weight:700;color:#8FE3C7;text-shadow:0 2px 12px rgba(0,0,0,0.55);">Military and First Responder Discount</p>
+    <p style="margin:16px 0 0;font-size:16.5px;font-weight:700;color:#8FE3C7;text-shadow:0 2px 12px rgba(0,0,0,0.55);">Military and First Responder Discount</p>
   </div>
 </section>
 
@@ -388,8 +373,8 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow" style="font-size:25px;">What we do:</span>
-      <h2 data-edit contenteditable="false">Painting that solves your problems — beautifully.</h2>
-      <p data-edit contenteditable="false">One accent wall or an entire interior. Exterior coatings built to take on this brutal Florida weather. Multi-unit properties, office spaces — whatever the job, you get sharp preparation, premium materials, and a flawless finish, every time.</p>
+      <h2>Painting that solves your problems — beautifully.</h2>
+      <p>One accent wall or an entire interior. Exterior coatings built to take on this brutal Florida weather. Multi-unit properties, office spaces — whatever the job, you get sharp preparation, premium materials, and a flawless finish, every time.</p>
     </div>
 
     <div class="services-rail">
@@ -398,23 +383,17 @@
       <div class="service-row">
         <span class="s-num">1</span>
         <div class="s-media">
-          <div class="photo-slot has-photo" style="background-image:url('images/service-interior.jpg')" onclick="triggerUpload(this)">
-            <div class="ph-inner">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M4 20c0-3 2-4 2-7a3 3 0 016 0c0 3-2 3.5-2 6M13 6l5 5-7 7-5-5z" stroke="#0B6E6E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span>CLICK TO ADD PHOTO<br>Interior painting</span>
-            </div>
-            <input type="file" accept="image/*" onchange="setPhoto(this)">
-            <span class="swap-hint">Click to replace</span>
+          <div class="photo-slot has-photo" style="background-image:url('images/service-interior.jpg')">
           </div>
         </div>
         <div class="s-text">
           <span class="tag">RESIDENTIAL</span>
-          <h3 data-edit contenteditable="false">Interior Painting</h3>
-          <p data-edit contenteditable="false">Walls, ceilings, trim and cabinetry finished with low-VOC paints and crisp, clean lines — furniture and floors fully protected throughout.</p>
+          <h3>Interior Painting</h3>
+          <p>Walls, ceilings, trim and cabinetry finished with low-VOC paints and crisp, clean lines — furniture and floors fully protected throughout.</p>
           <ul>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-edit contenteditable="false">Color consultation included</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-edit contenteditable="false">Furniture &amp; floor protection</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-edit contenteditable="false">Daily cleanup, no lingering odor</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Color consultation included</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Furniture &amp; floor protection</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Daily cleanup, no lingering odor</span></li>
           </ul>
         </div>
       </div>
@@ -422,23 +401,17 @@
       <div class="service-row reverse">
         <span class="s-num">2</span>
         <div class="s-media">
-          <div class="photo-slot has-photo" style="background-image:url('images/hero-exterior.jpg')" onclick="triggerUpload(this)">
-            <div class="ph-inner">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M4 20c0-3 2-4 2-7a3 3 0 016 0c0 3-2 3.5-2 6M13 6l5 5-7 7-5-5z" stroke="#0B6E6E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span>CLICK TO ADD PHOTO<br>Exterior painting</span>
-            </div>
-            <input type="file" accept="image/*" onchange="setPhoto(this)">
-            <span class="swap-hint">Click to replace</span>
+          <div class="photo-slot has-photo" style="background-image:url('images/hero-exterior.jpg')">
           </div>
         </div>
         <div class="s-text">
           <span class="tag">RESIDENTIAL</span>
-          <h3 data-edit contenteditable="false">Exterior Painting</h3>
-          <p data-edit contenteditable="false">Weather-ready coatings applied over properly pressure-washed, patched and primed surfaces so the finish holds up to Florida sun and storms.</p>
+          <h3>Exterior Painting</h3>
+          <p>Weather-ready coatings applied over properly pressure-washed, patched and primed surfaces so the finish holds up to Florida sun and storms.</p>
           <ul>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-edit contenteditable="false">UV &amp; moisture-resistant coatings</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-edit contenteditable="false">Wood, stucco &amp; Hardie siding</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-edit contenteditable="false">5-year workmanship warranty</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>UV &amp; moisture-resistant coatings</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Wood, stucco &amp; Hardie siding</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>5-year workmanship warranty</span></li>
           </ul>
         </div>
       </div>
@@ -446,23 +419,17 @@
       <div class="service-row">
         <span class="s-num">3</span>
         <div class="s-media">
-          <div class="photo-slot has-photo" style="background-image:url('images/service-commercial.jpg')" onclick="triggerUpload(this)">
-            <div class="ph-inner">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M4 20c0-3 2-4 2-7a3 3 0 016 0c0 3-2 3.5-2 6M13 6l5 5-7 7-5-5z" stroke="#0B6E6E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span>CLICK TO ADD PHOTO<br>Commercial painting</span>
-            </div>
-            <input type="file" accept="image/*" onchange="setPhoto(this)">
-            <span class="swap-hint">Click to replace</span>
+          <div class="photo-slot has-photo" style="background-image:url('images/service-commercial.jpg')">
           </div>
         </div>
         <div class="s-text">
           <span class="tag">COMMERCIAL</span>
-          <h3 data-edit contenteditable="false">Commercial Painting</h3>
-          <p data-edit contenteditable="false">Retail, office and multi-family projects scheduled around your business hours, with crews sized to finish on time and on budget.</p>
+          <h3>Commercial Painting</h3>
+          <p>Retail, office and multi-family projects scheduled around your business hours, with crews sized to finish on time and on budget.</p>
           <ul>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-edit contenteditable="false">After-hours &amp; weekend scheduling</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-edit contenteditable="false">Multi-unit &amp; HOA experience</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-edit contenteditable="false">Certificate of insurance on file</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>After-hours &amp; weekend scheduling</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Multi-unit &amp; HOA experience</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Certificate of insurance on file</span></li>
           </ul>
         </div>
       </div>
@@ -470,23 +437,17 @@
       <div class="service-row reverse">
         <span class="s-num">4</span>
         <div class="s-media">
-          <div class="photo-slot has-photo" style="background-image:url('images/service-drywall.jpg')" onclick="triggerUpload(this)">
-            <div class="ph-inner">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M4 20c0-3 2-4 2-7a3 3 0 016 0c0 3-2 3.5-2 6M13 6l5 5-7 7-5-5z" stroke="#0B6E6E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span>CLICK TO ADD PHOTO<br>Stucco &amp; drywall repair</span>
-            </div>
-            <input type="file" accept="image/*" onchange="setPhoto(this)">
-            <span class="swap-hint">Click to replace</span>
+          <div class="photo-slot has-photo" style="background-image:url('images/service-drywall.jpg')">
           </div>
         </div>
         <div class="s-text">
           <span class="tag">REPAIR</span>
-          <h3 data-edit contenteditable="false">Stucco &amp; Drywall Repair</h3>
-          <p data-edit contenteditable="false">Cracks, water damage and popped nails patched and textured to match before a single coat of paint goes on.</p>
+          <h3>Stucco &amp; Drywall Repair</h3>
+          <p>Cracks, water damage and popped nails patched and textured to match before a single coat of paint goes on.</p>
           <ul>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-edit contenteditable="false">Crack &amp; texture matching</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-edit contenteditable="false">Water damage assessment</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-edit contenteditable="false">Bundled with your paint job</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Crack &amp; texture matching</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Water damage assessment</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Bundled with your paint job</span></li>
           </ul>
         </div>
       </div>
@@ -499,14 +460,14 @@
   <div class="wrap">
     <div class="section-head center">
       <span class="eyebrow">How it works</span>
-      <h2 data-edit contenteditable="false">Five steps from first call to final walkthrough</h2>
+      <h2>Five steps from first call to final walkthrough</h2>
     </div>
     <div class="process-grid">
-      <div class="process-step"><span class="pnum">1</span><h4 data-edit contenteditable="false">Free consultation</h4><p data-edit contenteditable="false">We visit, measure, and talk through your goals and budget.</p></div>
-      <div class="process-step"><span class="pnum">2</span><h4 data-edit contenteditable="false">Color &amp; quote</h4><p data-edit contenteditable="false">Get a detailed written estimate and help choosing colors.</p></div>
-      <div class="process-step"><span class="pnum">3</span><h4 data-edit contenteditable="false">Prep &amp; protect</h4><p data-edit contenteditable="false">Surfaces cleaned, patched, taped, and furniture covered.</p></div>
-      <div class="process-step"><span class="pnum">4</span><h4 data-edit contenteditable="false">Professional finish</h4><p data-edit contenteditable="false">Premium paints applied by an experienced, background-checked crew.</p></div>
-      <div class="process-step"><span class="pnum">5</span><h4 data-edit contenteditable="false">Final walkthrough</h4><p data-edit contenteditable="false">We inspect together and don't leave until you're satisfied.</p></div>
+      <div class="process-step"><span class="pnum">1</span><h4>Free consultation</h4><p>We visit, measure, and talk through your goals and budget.</p></div>
+      <div class="process-step"><span class="pnum">2</span><h4>Color &amp; quote</h4><p>Get a detailed written estimate and help choosing colors.</p></div>
+      <div class="process-step"><span class="pnum">3</span><h4>Prep &amp; protect</h4><p>Surfaces cleaned, patched, taped, and furniture covered.</p></div>
+      <div class="process-step"><span class="pnum">4</span><h4>Professional finish</h4><p>Premium paints applied by an experienced, background-checked crew.</p></div>
+      <div class="process-step"><span class="pnum">5</span><h4>Final walkthrough</h4><p>We inspect together and don't leave until you're satisfied.</p></div>
     </div>
   </div>
 </section>
@@ -515,36 +476,28 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Recent work</span>
-      <h2 data-edit contenteditable="false">Projects across the Gulf Coast</h2>
+      <h2>Projects across the Gulf Coast</h2>
     </div>
     <div class="gallery-grid">
       <div class="g-wide">
-        <div class="photo-slot has-photo" style="background-image:url('images/gallery-fresh-look.jpg');background-position:center 30%" onclick="triggerUpload(this)">
-          <div class="ph-inner"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20c0-3 2-4 2-7a3 3 0 016 0c0 3-2 3.5-2 6M13 6l5 5-7 7-5-5z" stroke="#0B6E6E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>CLICK TO ADD PHOTO</span></div>
-          <input type="file" accept="image/*" onchange="setPhoto(this)"><span class="swap-hint">Click to replace</span>
+        <div class="photo-slot has-photo" style="background-image:url('images/gallery-fresh-look.jpg');background-position:center 30%">
         </div>
-        <p class="g-cap" data-edit contenteditable="false"><b>Fresh Look</b> — Bold blue interior repaint</p>
+        <p class="g-cap"><b>Fresh Look</b> — Bold blue interior repaint</p>
       </div>
       <div>
-        <div class="photo-slot has-photo" style="background-image:url('images/gallery-fresh-colors.jpg')" onclick="triggerUpload(this)">
-          <div class="ph-inner"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20c0-3 2-4 2-7a3 3 0 016 0c0 3-2 3.5-2 6M13 6l5 5-7 7-5-5z" stroke="#0B6E6E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>CLICK TO ADD PHOTO</span></div>
-          <input type="file" accept="image/*" onchange="setPhoto(this)"><span class="swap-hint">Click to replace</span>
+        <div class="photo-slot has-photo" style="background-image:url('images/gallery-fresh-colors.jpg')">
         </div>
-        <p class="g-cap" data-edit contenteditable="false"><b>Fresh Colors</b> — Premium paints in any color you can imagine</p>
+        <p class="g-cap"><b>Fresh Colors</b> — Premium paints in any color you can imagine</p>
       </div>
       <div>
-        <div class="photo-slot has-photo" style="background-image:url('images/hero-exterior.jpg')" onclick="triggerUpload(this)">
-          <div class="ph-inner"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20c0-3 2-4 2-7a3 3 0 016 0c0 3-2 3.5-2 6M13 6l5 5-7 7-5-5z" stroke="#0B6E6E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>CLICK TO ADD PHOTO</span></div>
-          <input type="file" accept="image/*" onchange="setPhoto(this)"><span class="swap-hint">Click to replace</span>
+        <div class="photo-slot has-photo" style="background-image:url('images/hero-exterior.jpg')">
         </div>
-        <p class="g-cap" data-edit contenteditable="false"><b>Bradenton Exterior</b> — Full repaint, two-story home</p>
+        <p class="g-cap"><b>Bradenton Exterior</b> — Full repaint, two-story home</p>
       </div>
       <div class="g-wide">
-        <div class="photo-slot has-photo" style="background-image:url('images/gallery-fresh-bedroom.jpg');background-position:center 75%" onclick="triggerUpload(this)">
-          <div class="ph-inner"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20c0-3 2-4 2-7a3 3 0 016 0c0 3-2 3.5-2 6M13 6l5 5-7 7-5-5z" stroke="#0B6E6E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>CLICK TO ADD PHOTO</span></div>
-          <input type="file" accept="image/*" onchange="setPhoto(this)"><span class="swap-hint">Click to replace</span>
+        <div class="photo-slot has-photo" style="background-image:url('images/gallery-fresh-bedroom.jpg');background-position:center 75%">
         </div>
-        <p class="g-cap" data-edit contenteditable="false"><b>Fresh Bedroom</b> — Deep green accent wall &amp; warm neutrals</p>
+        <p class="g-cap"><b>Fresh Bedroom</b> — Deep green accent wall &amp; warm neutrals</p>
       </div>
     </div>
   </div>
@@ -554,17 +507,17 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Where we work</span>
-      <h2 data-edit contenteditable="false">Proudly serving the Gulf Coast</h2>
+      <h2>Proudly serving the Gulf Coast</h2>
     </div>
     <div class="areas">
-      <span class="area-pill" data-edit contenteditable="false">Bradenton</span>
-      <span class="area-pill" data-edit contenteditable="false">Sarasota</span>
-      <span class="area-pill" data-edit contenteditable="false">Lakewood Ranch</span>
-      <span class="area-pill" data-edit contenteditable="false">Siesta Key</span>
-      <span class="area-pill" data-edit contenteditable="false">Longboat Key</span>
-      <span class="area-pill" data-edit contenteditable="false">Anna Maria Island</span>
-      <span class="area-pill" data-edit contenteditable="false">Parrish</span>
-      <span class="area-pill" data-edit contenteditable="false">Palmetto</span>
+      <span class="area-pill">Bradenton</span>
+      <span class="area-pill">Sarasota</span>
+      <span class="area-pill">Lakewood Ranch</span>
+      <span class="area-pill">Siesta Key</span>
+      <span class="area-pill">Longboat Key</span>
+      <span class="area-pill">Anna Maria Island</span>
+      <span class="area-pill">Parrish</span>
+      <span class="area-pill">Palmetto</span>
     </div>
   </div>
 </section>
@@ -573,15 +526,15 @@
   <div class="wrap">
     <div class="cta-banner">
       <div>
-        <h2 data-edit contenteditable="false"><span style="font-size:clamp(20px,5vw,45px);font-weight:800;line-height:1.05;display:inline-block;">REFRESH</span> your stale old faded or outdated walls!</h2>
+        <h2><span style="font-size:clamp(20px,5vw,45px);font-weight:800;line-height:1.05;display:inline-block;">REFRESH</span> your stale old faded or outdated walls!</h2>
       </div>
       <div style="display:flex;flex-direction:column;gap:16px;align-items:flex-start;max-width:460px;">
-        <p data-edit contenteditable="false" style="margin:0;"><span style="font-size:clamp(13px,3vw,24px);font-weight:800;line-height:1.05;display:inline-block;">READY</span> for a <span style="font-size:clamp(13px,3vw,24px);font-weight:800;line-height:1.05;display:inline-block;">FRESH NEW LOOK</span>? Get a free no obligation estimate by calling us now.</p>
+        <p style="margin:0;"><span style="font-size:clamp(13px,3vw,24px);font-weight:800;line-height:1.05;display:inline-block;">READY</span> for a <span style="font-size:clamp(13px,3vw,24px);font-weight:800;line-height:1.05;display:inline-block;">FRESH NEW LOOK</span>? Get a free no obligation estimate by calling us now.</p>
         <div style="display:flex;gap:14px;flex-wrap:wrap;">
           <a class="btn btn-coral" href="tel:+19412221478">Call 941-222-1478</a>
           <a class="btn btn-outline" style="border-color:rgba(255,255,255,0.6);" href="mailto:pros@affordablepaintingpros.com">Email Us</a>
         </div>
-        <p data-edit contenteditable="false" style="margin:0;font-weight:700;color:#8FE3C7;">Military and First Responder Discount</p>
+        <p style="margin:0;font-weight:700;color:#8FE3C7;">Military and First Responder Discount</p>
       </div>
     </div>
   </div>
@@ -594,7 +547,7 @@
         <div class="foot-logo">
           <img src="images/logo.png" alt="Affordable Painting Pros — Clean and Professional">
         </div>
-        <p data-edit contenteditable="false" style="max-width:280px;font-size:14px;">Locally owned and operated. A portion of all proceeds goes to a homeless shelter.</p>
+        <p style="max-width:280px;font-size:14px;">Locally owned and operated. A portion of all proceeds goes to a homeless shelter.</p>
       </div>
       <div>
         <h5>Services</h5>
@@ -619,16 +572,16 @@
       <div>
         <h5>Contact</h5>
         <ul class="foot-contact">
-          <li><span data-edit contenteditable="false">941-222-1478</span></li>
-          <li><span data-edit contenteditable="false">Military and First Responder Discount</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><path d="M3 6h18v12H3z" stroke="#8FE3C7" stroke-width="1.4"/><path d="M3 7l9 6 9-6" stroke="#8FE3C7" stroke-width="1.4"/></svg><span data-edit contenteditable="false">pros@affordablepaintingpros.com</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.4-7-11a7 7 0 0114 0c0 4.6-7 11-7 11z" stroke="#8FE3C7" stroke-width="1.4"/><circle cx="12" cy="10" r="2.4" stroke="#8FE3C7" stroke-width="1.4"/></svg><span data-edit contenteditable="false">Bradenton, Florida</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 3" stroke="#8FE3C7" stroke-width="1.4" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#8FE3C7" stroke-width="1.4"/></svg><span data-edit contenteditable="false">Mon–Fri 7am–8pm · Sat–Sun 8am–4pm</span></li>
+          <li><span>941-222-1478</span></li>
+          <li><span>Military and First Responder Discount</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M3 6h18v12H3z" stroke="#8FE3C7" stroke-width="1.4"/><path d="M3 7l9 6 9-6" stroke="#8FE3C7" stroke-width="1.4"/></svg><span>pros@affordablepaintingpros.com</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.4-7-11a7 7 0 0114 0c0 4.6-7 11-7 11z" stroke="#8FE3C7" stroke-width="1.4"/><circle cx="12" cy="10" r="2.4" stroke="#8FE3C7" stroke-width="1.4"/></svg><span>Bradenton, Florida</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 3" stroke="#8FE3C7" stroke-width="1.4" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#8FE3C7" stroke-width="1.4"/></svg><span>Mon–Fri 7am–8pm · Sat–Sun 8am–4pm</span></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
-      <span data-edit contenteditable="false">© 2026 Affordable Painting Pros LLC. All rights reserved.</span>
+      <span>© 2026 Affordable Painting Pros LLC. All rights reserved.</span>
       <div style="display:flex;gap:20px;">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms &amp; Conditions</a>
@@ -636,24 +589,6 @@
     </div>
   </div>
 </footer>
-
-<script>
-  function triggerUpload(slot){
-    if(document.documentElement.getAttribute('data-editing') !== 'true') return;
-    slot.querySelector('input[type=file]').click();
-  }
-  function setPhoto(input){
-    const file = input.files[0];
-    if(!file) return;
-    const reader = new FileReader();
-    reader.onload = function(e){
-      const slot = input.closest('.photo-slot');
-      slot.style.backgroundImage = 'url(' + e.target.result + ')';
-      slot.classList.add('has-photo');
-    };
-    reader.readAsDataURL(file);
-  }
-</script>
 
 </body>
 </html>
